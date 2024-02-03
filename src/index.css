@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,46 +11,42 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+}
+
+.react-flow__attribution {
+  background: #373551;
+  right: 8px !important;
+}
+
+.react-flow__attribution > a {
+  color: white !important;
 }
 
 .react-flow .react-flow__handle {
-  width: 30px;
-  height: 14px;
-  border-radius: 3px;
-  background-color: #784be8;
-}
-
-.react-flow .react-flow__handle-top {
-  top: -10px;
-}
-
-.react-flow .react-flow__handle-bottom {
-  bottom: -10px;
-}
-
-.react-flow .react-flow__node {
-  height: 40px;
-  width: 150px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  border-width: 2px;
-  font-weight: 700;
-}
-
-.react-flow .react-flow__edge path,
-.react-flow__connectionline path {
-  stroke-width: 2;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
 }
 
 .wrapper {
   flex-grow: 1;
   height: 100vh;
   width: 100vw;
+  top: 0;
+  position: fixed;
+}
+
+.baseNode {
+  background: #373551;
+  border: 7px #474564 solid;
 }
 
 .customNode {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: transparent;
+  border: none;
 }
 
 .customNode:focus {
@@ -59,6 +55,11 @@
 }
 
 .customNode:active {
-  border: none; 
+  border: none;
   outline: none;
+}
+
+.customNode {
+  overflow: hidden;
+  padding: 20px;
 }
