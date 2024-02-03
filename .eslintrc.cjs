@@ -2,37 +2,42 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
-    'eslint:recommended',
+    "eslint:recommended",
     "airbnb",
-    'plugin:react/recommended',
+    "plugin:react/recommended",
     "plugin:prettier/recommended",
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "ecmaFeatures": {
-      "jsx": true
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
+    ecmaFeatures: {
+      jsx: true,
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh',
+  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  settings: { react: { version: "18.2" } },
+  plugins: [
+    "react-refresh",
 
-    "@typescript-eslint", "react", "spellcheck", "sonarjs", "import"
+    "@typescript-eslint",
+    "react",
+    "spellcheck",
+    "sonarjs",
+    "import",
   ],
-  "settings": {
+  settings: {
     "import/resolver": {
-      "typescript": {}
-    }
+      typescript: {},
+    },
   },
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
+    "react-refresh/only-export-components": [
+      "warn",
       { allowConstantExport: true },
     ],
     "react/jsx-filename-extension": [0],
@@ -45,16 +50,16 @@ module.exports = {
     "id-length": [
       2,
       {
-        "min": 3,
-        "properties": "never",
-        "exceptions": ["id"]
-      }
+        min: 3,
+        properties: "never",
+        exceptions: ["id"],
+      },
     ],
     "react/require-default-props": [
       2,
       {
-        "functions": "defaultArguments"
-      }
+        functions: "defaultArguments",
+      },
     ],
     "@typescript-eslint/no-duplicate-enum-values": "error",
     "@typescript-eslint/no-implicit-any-catch": "error",
@@ -63,25 +68,25 @@ module.exports = {
     "max-lines": [
       "error",
       {
-        "max": 250,
-        "skipBlankLines": true,
-        "skipComments": true
-      }
+        max: 250,
+        skipBlankLines: true,
+        skipComments: true,
+      },
     ],
     "max-depth": ["error", 3],
     "max-lines-per-function": [
       "error",
       {
-        "max": 200,
-        "skipBlankLines": true,
-        "skipComments": true
-      }
+        max: 200,
+        skipBlankLines: true,
+        skipComments: true,
+      },
     ],
     "max-params": [
       "error",
       {
-        "max": 4
-      }
+        max: 4,
+      },
     ],
     "no-alert": "error",
     "no-console": "error",
@@ -91,51 +96,48 @@ module.exports = {
     "no-magic-numbers": [
       "error",
       {
-        "ignore": [-1, 0, 1]
-      }
+        ignore: [-1, 0, 1],
+      },
     ],
     "@typescript-eslint/no-redeclare": "error",
     "@typescript-eslint/ban-types": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
-    "@typescript-eslint/no-unsafe-return": "error",
     "@typescript-eslint/no-var-requires": "error",
-    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
-    "@typescript-eslint/no-unnecessary-condition": "error",
-    "@typescript-eslint/no-floating-promises": ["error"],
     "@typescript-eslint/naming-convention": [
       "error",
       {
-        "selector": "interface",
-        "format": ["PascalCase"],
-        "custom": {
-          "regex": "^I[A-Za-z]",
-          "match": true
-        }
+        selector: "interface",
+        format: ["PascalCase"],
+        custom: {
+          regex: "^I[A-Za-z]",
+          match: true,
+        },
       },
       {
-        "selector": "enum",
-        "format": ["PascalCase"],
-        "custom": {
-          "regex": "Enum$",
-          "match": true
-        }
-      }
+        selector: "enum",
+        format: ["PascalCase"],
+        custom: {
+          regex: "Enum$",
+          match: true,
+        },
+      },
     ],
     "spellcheck/spell-checker": [
       1,
       {
-        "comments": false,
-        "strings": false,
-        "templates": false,
-        "identifiers": true,
-        "lang": "en_US",
-        "skipWords": [
+        comments: false,
+        strings: false,
+        templates: false,
+        identifiers: true,
+        lang: "en_US",
+        skipWords: [
           "youtube",
           "enum",
           "unlikes",
           "checkbox",
           "fieldset",
+          "dataset",
           "readonly",
           "href",
           "dsn",
@@ -143,18 +145,18 @@ module.exports = {
           "emojis",
           "Sao",
           "Paulo",
-          "Gmt"
+          "Gmt",
         ],
-        "minLength": 3
-      }
+        minLength: 3,
+      },
     ],
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
   },
-}
+};

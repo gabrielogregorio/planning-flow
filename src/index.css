@@ -41,12 +41,13 @@
 
 .baseNode {
   background: #373551;
-  border: 7px #474564 solid;
+  border-left: 15px solid #45435f;
 }
 
 .customNode {
   background: transparent;
   border: none;
+  padding-right: 20px;
 }
 
 .customNode:focus {
@@ -61,5 +62,15 @@
 
 .customNode {
   overflow: hidden;
-  padding: 20px;
+}
+
+.react-flow__controls-button {
+  background: #373551;
+  fill: white;
+  border-bottom: 1px solid #474564;
+  transition: all 250ms ease-out;
+}
+
+.react-flow__controls-button:hover {
+  background: #474564;
 }

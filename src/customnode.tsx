@@ -1,18 +1,20 @@
-import React, { memo } from "react";
-import { Handle, Position } from "reactflow";
+import { memo } from "react";
+import { Handle, NodeProps, Position } from "reactflow";
 
-function CustomNode({ data, id, isConnectable }) {
+const CustomNode = ({ data, id, isConnectable }: NodeProps) => {
   return (
     <>
       <Handle
         type="target"
         position={Position.Left}
+        id="left"
         style={{ background: "#3d3c49", left: -5 }}
-        onConnect={(params) => console.log("handle onConnect", params)}
+        onConnect={() => {}}
         isConnectable={isConnectable}
       />
+
       <div className="baseNode">
-        <div style={{ minWidth: "20px" }}></div>
+        <div style={{ minWidth: "20px" }} />
         <textarea
           className="nodrag customNode"
           onChange={(event) => {
@@ -20,17 +22,17 @@ function CustomNode({ data, id, isConnectable }) {
           }}
           value={data.text}
         />
-        <div style={{ minWidth: "20px" }}></div>
+        <div style={{ minWidth: "20px" }} />
       </div>
       <Handle
         type="source"
         position={Position.Right}
-        id="a"
+        id="right"
         style={{ right: -5, background: "#3d3c49" }}
         isConnectable={isConnectable}
       />
     </>
   );
-}
+};
 
 export default memo(CustomNode);
